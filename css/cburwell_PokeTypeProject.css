@@ -1,0 +1,141 @@
+.flexContainer {
+   display: flex;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   flex-direction: row;
+}
+
+.segment {
+    background-color: #6DB338;
+    padding: 10px;
+}
+
+body {
+    background-color: #2F6108;
+    overflow-y: scroll;
+}
+
+.header {    
+    color: white;
+    background-color: #4CA20B;
+    padding: 10px;
+}
+
+#title {
+    flex: 0 0 auto;
+    align-self: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#searchBar {
+    font-size: 25px;
+    flex: 0 0 auto;
+    margin-left: auto;
+    background-color: #2F6108;
+    min-width: 33.5%;
+    padding: 5px;
+    text-align: right;
+    border: solid 1px;
+    border-color: white;
+}
+
+#searchButton {
+    border: solid 1px;
+    border-color: white;
+}
+
+#dialogButton {
+    float: right;
+    margin: 1em;
+    margin-left: auto;
+}
+
+#container {
+
+}
+
+#centeredContainer {
+    justify-content: center;
+}
+
+#speciesContainer {
+}
+
+#descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sprite {
+    flex: 0 0 auto;
+}
+
+img#sprite {
+    width: 225px;
+    height: 225px;
+}
+
+#typing {
+    flex: 2 0 auto;
+    font-size: 40px;
+    color: white;
+    height: 50%;
+    display: flex;
+}
+
+#typeSpan {
+    flex: 1 0 auto;
+    align-self: center;
+}
+
+#speciesName {
+    flex: 1 0 auto;
+    font-size: 30px;
+    font-family: Verdana;
+    height: 25%;
+    color: white;
+}
+
+#abilities {
+    flex: 1 0 auto;
+    font-size: 22px;
+    height: 25%;
+    color: #33ff00;
+}
+
+#effectivenessContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.effectivenessHeader {
+    flex: 0 0 auto;
+    font-size: 25px;
+    color: white;
+    min-width: 25%;
+}
+
+.types {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+.horizontalBreak {
+    background: #6DB338;
+    height:1px;
+    margin: 1em 0em;
+}
+
+#dropDownMenu {
+    float: right;
+    width: 100%;
+    margin-top: 1em;
+}

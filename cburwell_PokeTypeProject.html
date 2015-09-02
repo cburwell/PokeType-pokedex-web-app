@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cburwell_PokeTypeProject</title>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <!-- Currently using MINIFIED js files, change js src to js/cburwell_PokeTypeProject.js if this is a problem -->
+    <script src="js/cburwell_PokeTypeProject.min.js"></script>
+    <link href="css/cburwell_PokeTypeProject.css" rel="stylesheet">
+
+    <link href="jqui-1.10.4/css/le-frog/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    <script src="jqui-1.10.4/js/jquery-1.10.2.js"></script>
+    <script src="jqui-1.10.4/js/jquery-ui-1.10.4.custom.js"></script>
+    <script>
+        $(function() { new PTApp().configure(); });
+    </script>
+</head>
+<body>
+    <header class="flexContainer header">
+        <span id="title">Pok&eacute;Type</span>
+        <input type="text" id="searchBar" class="header"
+            placeholder="Search for a Pok&eacute;mon by name or id"
+            spellcheck="false">
+        <button id="searchButton">Go!</button>
+    </header>
+    
+    <div id="container" class="flexContainer">
+        <button id="dialogButton">Help!</button>
+    </div>
+    
+    <div id="centeredContainer" class="flexContainer">
+        <div id="speciesContainer" class="flexContainer">
+            <!-- This div holds the sprite -->
+            <div id="sprite">
+                <img id="sprite" src="http://img2.wikia.nocookie.net/__cb20100717083156/pokemon/images/1/1f/Pokedex_FRLG.png"></img>
+            </div>
+            
+            <div id="descriptionContainer">
+                <!-- This div will contain the primary typing, a slash, and the secondary typing -->
+                <div id="typing">
+                    <span id="typeSpan">
+                        <span id="type1">Type 1</span>
+                        /
+                        <span id="type2">Type 2</span>
+                    </span>
+                </div>
+                
+                <!-- This div is for the name -->
+                <div id="speciesName">Pok&eacute;mon Name</div>
+
+                <!-- This div will hold the abilities -->
+                <div id="abilities">Pok&eacute;mon Abilities</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="effectivenessContainer">
+        <div class="effectivenessHeader">
+                <span class="underline">Is weak to...</span>
+                <ul class="types" id="weak">
+                </ul>
+        </div>
+        <div class="effectivenessHeader">
+                <span class="underline">Is normally damaged by...</span>
+                <ul class="types" id="normal">
+                </ul>
+        </div>
+        <div class="effectivenessHeader">
+                <span class="underline">Resists...</span>
+                <ul class="types" id="resists">
+                </ul>
+        </div>
+        <div class="effectivenessHeader">
+                <span class="underline">Is immune to...</span>
+                <ul class="types" id="immune">
+                </ul>
+        </div>
+    </div>   
+</body>
+    <div id="dialogMessage" title="Pok&eacute;Type Help" style="display:none;">
+        <span>Welcome to Pok&eacute;Type! You can use this app to search for a Pok&eacute;mon by name, id, or by using the dropdown Pok&eacute;mon Explorer found below.<div class="horizontalBreak"></div>For a given request, the app will display the Pok&eacute;mon's type(s), name, abilities, and column lists of its various type data.<div class="horizontalBreak"></div>A user may type in the Pok&eacute;mon's name or id and selected the 'Go!' button to search.<div class="horizontalBreak"></div>If you are having trouble finding a Pok&eacute;mon by name, try using their id or hyphenating their gender to their name (ex: "nidoran" will not be found, but "nidoran-m" or "nidonran-f" will be.</span>
+        <br><br>
+        <div class="horizontalBreak"></div>
+        <span>Still can't figure it out? Try the Pok&eacute;mon explorer! You may select a Pok&eacute;mon with your mouse or by typing in its name.</span>
+        <br>
+        <select id="dropDownMenu" dir="rtl">
+        </select>
+    </div>
+</html>
